@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0c273bd24b.js" crossorigin="anonymous"></script>
+    <title>Pasion Riverplatense - Home</title>
+</head>
+<body>
+    <style>
+        * {
+            margin:0;
+        }
+        h1 {
+            position: relative;
+            top:-100px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        header {
+            background-image: url('https://images2.minutemediacdn.com/image/upload/c_crop,w_3700,h_2081,x_0,y_423/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_es_international_web/01gsx007z752c3y4fcrb.jpg');
+            background-size: cover;
+            height: 30em;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            background-color: #851111c2;
+        }
+        .path {
+            position: absolute;
+            display: inline-block;
+            height: 77%;
+            width: 98.8vw;
+            background-color: rgba(255, 0, 0, 0.744);
+            clip-path: polygon(100% 10%, 100% 100%, 0% 100%);
+            opacity: 1;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        ul {
+            list-style: none;
+            background-color: aqua;
+            top:5em;
+            z-index:10;
+            height: 90vh;
+            width: 10em;
+            left:-36em;
+            position: absolute;
+            display:none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        ul li a{
+            text-decoration: none;
+        }
+        span {
+            color:#fff;
+            z-index: 2000px ;
+        }
+        
+        main {
+            margin-top: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10em;
+            background-color: rgb(103, 103, 103);
+        }
+        hr {
+            width:100%;
+            height: 70%;
+        }
+        .mid-container {
+            gap:3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+        }
+        .icons{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:1em;
+            background-color: #fff;
+            width: 7em;
+            height: 7em;
+            border-radius: 50%;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        div p {
+            padding-top:2px;
+            text-align: center;
+        }
+        .hr-container {
+            display:flex;
+            flex-direction: column;
+            height:100%;
+        }
+        i, .fa-bars{
+            background-color: #fff;
+        }
+
+        .fa-bars{
+            height: 2em;
+            width: 2em;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left:2em;
+            top:2em;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+    </style>
+    <header>
+        <h1>Pasion<span>Riverplatense</span></h1>
+        <nav>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            <ul>
+                <li><a href="#">Reseñas</a></li>
+                <li><a href="#">Proximos Partidos</a></li>
+                <li><a href="#">Palmares</a></li>
+            </ul>
+        </nav>
+        <div class="path"></div>
+    </header>
+    <main>
+        <div class="mid-container">
+            <div class="icons">
+                <i class="fa-solid fa-pen-nib fa-2xl"></i>
+                <p>Reseñas</p>
+            </div>
+            <div class="hr-container">
+                <hr>
+            </div>
+            <div class="icons">
+                <i class="fa-regular fa-futbol fa-2xl"></i>
+                <p>Proximos Partidos</p>
+            </div>
+            <div class="hr-container">
+                <hr>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-award fa-2xl"></i>
+                <p>Palmares</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        const menu = document.querySelector(".fa-bars");
+        const menuUl = document.querySelector('ul');
+    
+        function openMenu() {
+            if (menuUl.style.left === "-36em") {
+                menuUl.style.left = "0";
+            } else {
+                menuUl.style.left = "-36em";
+            }
+        }
+    </script>
+    
+</body>
+</html>
